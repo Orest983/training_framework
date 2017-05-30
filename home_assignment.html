@@ -1,0 +1,38 @@
+users
+   id
+   role_id
+   password
+   name
+   email
+   is_deleted
+
+role
+  id
+  name
+
+pages
+  id
+  uri
+  entity
+  entity_data
+  author_id
+  published_at
+  published_until
+  created_at
+
+
+SELECT * FROM pages WHERE uri = '123' && (published_until > 1  published_until IS null)
+---------
+
+написать класс обертку для использования модуля mysqli (провайдер)
+Интерфейс: query(), numRows(), fetchObject(), fetchAssoc()
+
+$result = $db->query("SELECT * FROM users WHERE name LIKE ':name'", array('name' => 'один'));
+foreach ($db->fetchObject($result) as $item) {
+  echo $item['name'].'<br />';
+}
+
+
+
+
+* dbforge MYSQLI установить программу
